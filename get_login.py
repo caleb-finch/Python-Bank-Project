@@ -33,7 +33,7 @@ def get_login():
     return authentication, savingsAmnt, checkingsAmnt, username
         
         
-get_login()
+#get_login()
 
 
 

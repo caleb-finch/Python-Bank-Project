@@ -16,7 +16,7 @@ def get_Account_Input(account_Info, savingsAmnt, checkingsAmnt):
                 print(f'Deposit option has been chosen')
                 transaction = int(input(f'How much do you want to deposit? (Cannot exceed $500):'))
                 
-            if function_Input == 2:
+            elif function_Input == 2:
                 print(f'Withdraw option has been chosen')
                 if account_Info == 1:
                     transaction = int(input(f'How much do you want to withdraw? (Cannot exceed $500):'))
@@ -31,11 +31,11 @@ def get_Account_Input(account_Info, savingsAmnt, checkingsAmnt):
                         print(f'ERROR! Withdraw amount exceeds accepted amount or is less than 0.')
                         transaction = int(input(f'How much do you want to withdraw? (Cannot exceed $500):'))
                         
-            if function_Input == 3:
+            elif function_Input == 3:
                 transaction = 0
                 print(f'Balance Inquiry option has been chosen')
                 
-            if function_Input == 4:
+            elif function_Input == 4:
                 print(f'Transfer option has been chosen')
                 if account_Info == 1:
                     transaction = int(input(f'How much do you want to transfer? (Cannot exceed $500):'))
@@ -48,7 +48,7 @@ def get_Account_Input(account_Info, savingsAmnt, checkingsAmnt):
                         print(f'ERROR! Withdraw amount exceeds accepted amount or is less than 0.')
                         transaction = int(input(f'How much do you want to withdraw? (Cannot exceed $500):'))
                         
-            if function_Input == 5:
+            elif function_Input == 5:
                 transaction = 0
                 print(f'Logout option has been chosen')
             
