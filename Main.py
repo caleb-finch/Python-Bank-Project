@@ -3,7 +3,7 @@
 #This is the main script that calls to other scripts Here is the flow for the script
 #Call to login_script --- Check if the login script authenticated the user, if it did then run get_transaction_info script --- run get_account_info script --- run function_input script --- run the calculate script --- run the output script .end
 
-##Main function
+##Getting variables from modules
 from get_login import get_login
 from get_trans_info import get_trans_info
 from get_Account_Info import get_Account_Info
@@ -12,6 +12,7 @@ from get_Calculate import get_Calculate
 from get_Savings_Output import get_Savings_Output
 from get_Checkings_Output import get_Checkings_Output
 
+##Main function
 def main():
     print(f'Welcome to KMoney Bank!')
     #call the get_login script
