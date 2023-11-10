@@ -25,7 +25,7 @@ def main():
     if authentication == 1:
         print(f'AUTHENTICATED')
         numTrans = get_trans_info()
-        print(f'we are back in main. {numTrans}')
+        #print(f'we are back in main. {numTrans}')
         transCounter = 0
         function_Input = 0
         while (transCounter != numTrans) and (function_Input != 5):
@@ -54,7 +54,4 @@ def main():
         print(f'{username} has been logged out!')
         
     
-    
-    
-        
 main()
