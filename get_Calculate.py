@@ -23,3 +23,7 @@ def get_Calculate(account_Info,  function_Input, savingsAmnt, checkingsAmnt, tra
             checkingsAmnt = checkingsAmnt + transaction
             
     return checkingsAmnt, savingsAmnt
+
+if __name__ == '__main__':
+    result = get_Calculate(1, 1, 1000, 500, 200) #change to what you want to test
+    print(result)

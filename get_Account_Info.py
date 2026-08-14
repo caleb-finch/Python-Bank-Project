@@ -20,4 +20,9 @@ def get_Account_Info():
             print(f"Error! You have not typed 's' or 'c'! Please try again.")
     return Account_Info
     
-#get_Account_Info()
+
+if __name__ == '__main__':
+    result = get_Account_Info()
+    print(result)
+
+#

@@ -20,6 +20,9 @@ def main():
     
     if authentication == 0:
         print(f'You have entered the wrong username and/or password too many times!')
+
+    if authentication == 2:
+        print(f'The database could not be found. Please contact the bank for assistance!')
         
         
     if authentication == 1:

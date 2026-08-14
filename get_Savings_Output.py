@@ -11,5 +11,8 @@ def get_Savings_Output(account_Info, username, function_Input, savingsAmnt, chec
         print(f'{username} balance:\nSavings Account: ${savingsAmnt}\nChecking Account: ${checkingsAmnt}')
     if function_Input == 4:
         print(f'{username} transferred ${transaction} from their checkings account to their savings account. Their new balance:\nSavings Account: ${savingsAmnt}\nChecking Account: ${checkingsAmnt}')
-        
-#get_Savings_Output('c', 'username', 2, 2000, 1000, 0)
+
+
+if __name__ == '__main__':
+    result = get_Savings_Output('s', 'username', 2, 2000, 1000, 0)
+    print(result)

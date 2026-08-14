@@ -18,6 +18,7 @@ def get_trans_info():
         
     return numTrans
     
-#get_trans_info()
-
+if __name__ == '__main__':
+    result = get_trans_info()
+    print(result)
             
