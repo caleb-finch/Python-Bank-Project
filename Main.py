@@ -40,7 +40,7 @@ def main():
             transaction, function_Input = get_Account_Input(account_Info, savingsAmnt, checkingsAmnt)
             
             ##Call script that manipulates checking/saving account with transaction variable
-            checkingsAmnt, savingsAmnt = get_Calculate(account_Info, function_Input, savingsAmnt, checkingsAmnt, transaction)
+            checkingsAmnt, savingsAmnt = get_Calculate(account_Info, function_Input, savingsAmnt, checkingsAmnt, transaction, username)
             
             ##OUTPUT.
             #This is for savings account

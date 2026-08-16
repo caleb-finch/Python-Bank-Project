@@ -28,6 +28,7 @@ def get_login():
             reader = csv.DictReader(csvfile)
             for row in reader:
                 users[row['username']] = row
+                
     except FileNotFoundError:
         print(f'Error: bank database file not found!')
         return authentication, savingsAmnt, checkingsAmnt, 'error'

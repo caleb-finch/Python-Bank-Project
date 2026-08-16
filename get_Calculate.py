@@ -2,8 +2,23 @@
 ##account = 1 is saving =2 is checking
 
 ##This is where we will calculate the accounts so we can get the updated amounts and can send this to output.
+import csv
 
-def get_Calculate(account_Info,  function_Input, savingsAmnt, checkingsAmnt, transaction):
+def save_account_balances(username, savingsAmnt, checkingsAmnt):
+    with open('bank_database.csv', 'r', newline='') as csvfile:
+        rows = list(csv.DictReader(csvfile))
+
+    for row in rows:
+        if row['username'] == username:
+            row['savingsAmnt'] = str(savingsAmnt)
+            row['checkingsAmnt'] = str(checkingsAmnt)
+
+    with open('bank_database.csv', 'w', newline='') as csvfile:
+        writer = csv.DictWriter(csvfile, fieldnames=['username', 'savingsAmnt', 'checkingsAmnt'])
+        writer.writeheader()
+        writer.writerows(rows)
+
+def get_Calculate(account_Info, function_Input, savingsAmnt, checkingsAmnt, transaction, username):
     if account_Info == 1:
         if  function_Input == 1:        #deposit
             savingsAmnt = savingsAmnt + transaction
@@ -21,9 +36,12 @@ def get_Calculate(account_Info,  function_Input, savingsAmnt, checkingsAmnt, tra
         if function_Input == 4:         #transfer
             savingsAmnt = savingsAmnt - transaction
             checkingsAmnt = checkingsAmnt + transaction
-            
+
+
+    save_account_balances(username, savingsAmnt, checkingsAmnt)
+
     return checkingsAmnt, savingsAmnt
 
 if __name__ == '__main__':
-    result = get_Calculate(1, 1, 1000, 500, 200) #change to what you want to test
+    result = get_Calculate(1, 1, 1000, 500, 300, 'cfinch') #change to what you want to test
     print(result)
