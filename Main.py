@@ -20,6 +20,9 @@ def main():
     
     if authentication == 0:
         print(f'You have entered the wrong username and/or password too many times!')
+
+    if authentication == 2:
+        print(f'The database could not be found. Please contact the bank for assistance!')
         
         
     if authentication == 1:
@@ -37,7 +40,7 @@ def main():
             transaction, function_Input = get_Account_Input(account_Info, savingsAmnt, checkingsAmnt)
             
             ##Call script that manipulates checking/saving account with transaction variable
-            checkingsAmnt, savingsAmnt = get_Calculate(account_Info, function_Input, savingsAmnt, checkingsAmnt, transaction)
+            checkingsAmnt, savingsAmnt = get_Calculate(account_Info, function_Input, savingsAmnt, checkingsAmnt, transaction, username)
             
             ##OUTPUT.
             #This is for savings account
